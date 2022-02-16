@@ -1,0 +1,35 @@
+.calc-display {
+    grid-row: 1;
+    height: 82px;
+    display: grid;
+    grid-template-rows: 22px 60px;
+}
+
+.calc-display-preview {
+    grid-row: 1;
+    font-size: 18px;
+    font-family: Consolas, monospace;
+    font-style: italic;
+    text-align: left;
+    margin: -1px 60px 2px 60px;
+    padding: 0 4px;
+    background: #1c1c1c;
+    color: #444444;
+    border-radius: 0 0 5px 5px;
+    overflow-x: auto;
+}
+
+.calc-display-value {
+    grid-row: 2;
+    font-size: 50px;
+    font-family: Consolas, monospace;
+    text-align: right;
+    margin: 0 5px;
+    padding: 0;
+    overflow-x: auto;
+}
+
+.calc-display-preview::-webkit-scrollbar,
+.calc-display-value::-webkit-scrollbar {
+    display: none;
+}
