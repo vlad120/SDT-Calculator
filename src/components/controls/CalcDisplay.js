@@ -15,7 +15,7 @@ export default function CalcDisplay(props) {
         previewBuilder.push(state.operation);
     }
 
-    const preview = previewBuilder.filter(x => Boolean(x)).join(' ');
+    const preview = previewBuilder.join(' ');
 
     return (
         <div className="calc-display">

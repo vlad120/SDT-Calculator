@@ -115,8 +115,10 @@ class BaseCalcState extends ICalcState {
 
     deleteClick() {
         if (this.isTransitionalState) return;
-        const value = this.owner.value;
-        if (value.length > 0) {
+        const value = this.owner.value.toLowerCase();
+        if (value.length === 1 || value.includes('infinity') || value.includes('nan')) {
+            this.owner.value = '0';
+        } else {
             this.owner.value = value.substring(0, value.length - 1);
         }
     }
